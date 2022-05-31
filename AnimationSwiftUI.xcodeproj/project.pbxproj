@@ -11,6 +11,7 @@
 		2C671A2A28456A650069CAC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671A2928456A650069CAC0 /* ContentView.swift */; };
 		2C671A2C28456A670069CAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C671A2B28456A670069CAC0 /* Assets.xcassets */; };
 		2C671A2F28456A670069CAC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C671A2E28456A670069CAC0 /* Preview Assets.xcassets */; };
+		2C671A3828460AFE0069CAC0 /* SurfingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671A3728460AFE0069CAC0 /* SurfingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2C671A2928456A650069CAC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C671A2B28456A670069CAC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C671A2E28456A670069CAC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C671A3728460AFE0069CAC0 /* SurfingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				2C671A2728456A650069CAC0 /* AnimationSwiftUIApp.swift */,
 				2C671A2928456A650069CAC0 /* ContentView.swift */,
+				2C671A3728460AFE0069CAC0 /* SurfingView.swift */,
 				2C671A2B28456A670069CAC0 /* Assets.xcassets */,
 				2C671A2D28456A670069CAC0 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C671A3828460AFE0069CAC0 /* SurfingView.swift in Sources */,
 				2C671A2A28456A650069CAC0 /* ContentView.swift in Sources */,
 				2C671A2828456A650069CAC0 /* AnimationSwiftUIApp.swift in Sources */,
 			);

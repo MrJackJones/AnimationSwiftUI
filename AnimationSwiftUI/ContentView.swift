@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAnimation = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Spacer()
+            if showAnimation {
+                SurfingView().frame(width: 200, height: 200)
+                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
+            }
+            Spacer()
+            Button(showAnimation ? "Hide Animation": "Show Animation") {
+                withAnimation {
+                    showAnimation.toggle()
+                }
+            }
+        }
+        .padding()
+        
     }
 }
 
