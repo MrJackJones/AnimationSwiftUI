@@ -13,13 +13,22 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            if showAnimation {
-                SurfingView().frame(width: 200, height: 200)
-                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
+            ZStack {
+                SunsetView().frame(width: 300, height: 300)
+                    .offset(x: showAnimation ? 0 : -UIScreen.main.bounds.width, y: showAnimation ? 0 : -UIScreen.main.bounds.height)
+                if showAnimation {
+                    SurfingView().frame(width: 300, height: 300)
+                        .transition(.asymmetric(insertion: .scale, removal: .opacity))
+                        
+                    WaveView().frame(width: 300, height: 300)
+                        .offset(y: CGFloat(1) * 2)
+                        .transition(.opacity)
+                        
+                    }
             }
             Spacer()
             Button(showAnimation ? "Hide Animation": "Show Animation") {
-                withAnimation {
+                withAnimation(.easeOut(duration: 2)) {
                     showAnimation.toggle()
                 }
             }
@@ -33,4 +42,17 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+
+extension Color {
+  init(_ hex: UInt, alpha: Double = 1) {
+    self.init(
+      .sRGB,
+      red: Double((hex >> 16) & 0xFF) / 255,
+      green: Double((hex >> 8) & 0xFF) / 255,
+      blue: Double(hex & 0xFF) / 255,
+      opacity: alpha
+    )
+  }
 }
