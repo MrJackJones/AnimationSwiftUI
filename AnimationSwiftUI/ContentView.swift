@@ -16,14 +16,12 @@ struct ContentView: View {
             ZStack {
                 SunsetView().frame(width: 300, height: 300)
                     .offset(x: showAnimation ? 0 : -UIScreen.main.bounds.width, y: showAnimation ? 0 : -UIScreen.main.bounds.height)
+                SurfingView().frame(width: 300, height: 300)
+                    .offset(x: showAnimation ? 0 : UIScreen.main.bounds.width)
                 if showAnimation {
-                    SurfingView().frame(width: 300, height: 300)
-                        .transition(.asymmetric(insertion: .scale, removal: .opacity))
-                        
                     WaveView().frame(width: 300, height: 300)
                         .offset(y: CGFloat(1) * 2)
                         .transition(.opacity)
-                        
                     }
             }
             Spacer()
